@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="card-deck">
+    
+
+	{% for post in posts %}
+  <div class="col">
+  
+        <div class='card-deck mt-4'>
+        <div class="card text-center">
+            <div class="card-block">
+                <h4 class="card-title">{{post.title}}</h4>
+                <h5 class="card-text">{{post.slug}}</h5>
+                <p class='card-body '></p>{{post.body |truncatechars:150 }}</p>
+                <a href="{% url 'article-detail' post.pk %}">read more</a>
+                
+            </div>
+            <div class="card-footer">
+                {{post.date_added}}
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+  {% endfor %}
+
+</div>
+</div>
+
+    
+{% endblock %}
