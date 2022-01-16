@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0p+&pdi=-phh4fyt8$xtts955=nyvyethymsxyt-qn@2)thkc^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['vigneshblog.herokuapp.com','127.0.0.1']
 
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'accounts'
+    'accounts',
 ]
 
 MIDDLEWARE = [
